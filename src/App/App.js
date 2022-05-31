@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import UseStateBasicExample from "../1-useState/useStateBasicExample";
 import UseStateArrayExample from "../1-useState/UseStateArrayExample";
 import UseStateObjectExample from "../1-useState/UseStateObjectExample";
+import UseStateMultipleStateExample from "../1-useState/UseStateMultipleStateExample";
 
 import "../App/app.css"
 
@@ -28,6 +29,14 @@ const App = () => {
                 <UseStateObjectExample />
             </center>
             <hr />
+
+            <center>
+                <p>useState Hook -- Multiple state Example</p>
+                {/** useStateMultipleStateExample.js file --> Multiple state logic*/}
+                <UseStateMultipleStateExample />
+            </center>
+            <hr />
+
         </Fragment>
     );
 }
