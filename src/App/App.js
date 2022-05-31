@@ -3,9 +3,11 @@ import UseStateBasicExample from "../1-useState/useStateBasicExample";
 import UseStateArrayExample from "../1-useState/UseStateArrayExample";
 import UseStateObjectExample from "../1-useState/UseStateObjectExample";
 import UseStateMultipleStateExample from "../1-useState/UseStateMultipleStateExample";
-
+import BasicClassBaseComponent from "../ClassBasedComponent/BasicClassBaseComponent";
+import FunctionBaseComponent from "../ClassBasedComponent/FunctionBaseComponent";
 import "../App/app.css"
 import UseStateSimpleCounnter from "../1-useState/UseStateSimpleCounter";
+
 
 const App = () => {
     return (
@@ -42,6 +44,21 @@ const App = () => {
                 <p>useState Hook -- Simple Counter Example</p>
                 {/** useStateSimpleCounter.js file --> Use State - Simple Counter Example*/}
                 <UseStateSimpleCounnter />
+            </center>
+            <hr />
+
+            <center>
+                <p>Basic Class Based Component</p>
+                {/** BasicClassBaseComponent.js file --> Basic Class Based Component Example*/}
+                <BasicClassBaseComponent />
+            </center>
+            <hr />
+
+
+            <center>
+                <p>Function Based Component</p>
+                {/** FunctionBaseComponent.js file --> Function Based Component Example*/}
+                <FunctionBaseComponent />
             </center>
             <hr />
 
