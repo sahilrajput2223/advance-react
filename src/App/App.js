@@ -5,6 +5,7 @@ import UseStateObjectExample from "../1-useState/UseStateObjectExample";
 import UseStateMultipleStateExample from "../1-useState/UseStateMultipleStateExample";
 
 import "../App/app.css"
+import UseStateSimpleCounnter from "../1-useState/UseStateSimpleCounter";
 
 const App = () => {
     return (
@@ -34,6 +35,13 @@ const App = () => {
                 <p>useState Hook -- Multiple state Example</p>
                 {/** useStateMultipleStateExample.js file --> Multiple state logic*/}
                 <UseStateMultipleStateExample />
+            </center>
+            <hr />
+
+            <center>
+                <p>useState Hook -- Simple Counter Example</p>
+                {/** useStateSimpleCounter.js file --> Use State - Simple Counter Example*/}
+                <UseStateSimpleCounnter />
             </center>
             <hr />
 
