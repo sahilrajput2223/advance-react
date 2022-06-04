@@ -5,8 +5,10 @@ import UseStateObjectExample from "../1-useState/UseStateObjectExample";
 import UseStateMultipleStateExample from "../1-useState/UseStateMultipleStateExample";
 import BasicClassBaseComponent from "../ClassBasedComponent/BasicClassBaseComponent";
 import FunctionBaseComponent from "../ClassBasedComponent/FunctionBaseComponent";
-import "../App/app.css"
 import UseStateSimpleCounnter from "../1-useState/UseStateSimpleCounter";
+import UseStateComplexCounnter from "../1-useState/UseStateComplexCounter";
+
+import "../App/app.css"
 
 
 const App = () => {
@@ -59,6 +61,14 @@ const App = () => {
                 <p>Function Based Component</p>
                 {/** FunctionBaseComponent.js file --> Function Based Component Example*/}
                 <FunctionBaseComponent />
+            </center>
+            <hr />
+
+
+            <center>
+                <p>useState Hook -- Complex Counter Example</p>
+                {/** UseStateComplexCounter.js file --> Complex Counter with 2 sec delay example*/}
+                <UseStateComplexCounnter />
             </center>
             <hr />
 
