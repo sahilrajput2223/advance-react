@@ -1,13 +1,17 @@
 import React from "react"
 
-import UseStateLearn from "./UseStateLearn";
+//import UseStateLearn from "./UseStateLearn";
+import UseEffectLearn from "./UseEffectLearn";
 
 import "../App/app.css"
 
 
 const App = () => {
     return (
-        <UseStateLearn />
+        <React.Fragment>
+            {/*} <UseStateLearn /> {*/}
+            <UseEffectLearn />
+        </React.Fragment>
     );
 }
 
