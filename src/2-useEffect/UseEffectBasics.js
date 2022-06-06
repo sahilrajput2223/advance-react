@@ -1,6 +1,19 @@
 import React from "react"
 
-//useEffect run on every render
+//we can define any number of useEffect hooks
+//useEffect run on every render -- on second parameter basis we can update this logic
+
+/*React.useEffect(callBack(), [])
+here [] is second param, dependancies list....
+
+three ways to call useEffect, as mentioned below
+
+1. React.useEffect(callBack()) --> this kind of useEffect hook will run every time
+2. React.useEffect(callBack(), []) --> this kind of useEffect hook will run single time when component will load
+3. React.useEffect(callBack(), [someValue1,someValue2]) --> this kind of useEffect hook will run specifc time when we update values from dependancies lis (here, someValue1 & someValue2)
+
+
+*/
 
 const UseEffectBasics = () => {
 
@@ -15,6 +28,14 @@ const UseEffectBasics = () => {
             document.title = 'No New Messages'
         }
 
+    }, [msgCount]);
+
+    React.useEffect(() => {
+        console.log("Run Single Time - while componnt load");
+    }, []);
+
+    React.useEffect(() => {
+        console.log("Run Every Time");
     });
 
     const incrementCount = () => {
