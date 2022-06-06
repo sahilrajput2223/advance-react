@@ -31,7 +31,7 @@ const UseEffectBasics = () => {
     }, [msgCount]);
 
     React.useEffect(() => {
-        console.log("Run Single Time - while componnt load");
+        console.log("Run Single Time - while component load");
     }, []);
 
     React.useEffect(() => {
