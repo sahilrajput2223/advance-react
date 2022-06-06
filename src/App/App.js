@@ -9,7 +9,7 @@ import "../App/app.css"
 const App = () => {
     return (
         <React.Fragment>
-            {/*} <UseStateLearn /> {*/}
+            {/* <UseStateLearn /> */}
             <UseEffectLearn />
         </React.Fragment>
     );

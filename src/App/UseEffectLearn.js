@@ -1,13 +1,24 @@
 import React from "react";
 
+import UseEffectBasics from "../2-useEffect/UseEffectBasics";
+
 const UseEffectLearn = () => {
     return (
         <React.Fragment>
-            <center>
-                <h1>
-                    useEffect Hook Learning
-                </h1>
-            </center>
+            <div className="container">
+                <center>
+                    <h1>
+                        useEffect Hook Learning
+                    </h1>
+                </center>
+
+                <hr />
+
+                <center>
+                    <UseEffectBasics />
+                </center>
+
+            </div>
         </React.Fragment>
     );
 }
