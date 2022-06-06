@@ -1,6 +1,7 @@
 import React from "react";
 
 import UseEffectBasics from "../2-useEffect/UseEffectBasics";
+import UseEffectCleanUp from "../2-useEffect/UseEffectCleanUp";
 
 const UseEffectLearn = () => {
     return (
@@ -18,6 +19,11 @@ const UseEffectLearn = () => {
                     <UseEffectBasics />
                 </center>
 
+                <hr />
+
+                <center>
+                    <UseEffectCleanUp />
+                </center>
             </div>
         </React.Fragment>
     );
