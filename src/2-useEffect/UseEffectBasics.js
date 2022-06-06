@@ -7,8 +7,14 @@ const UseEffectBasics = () => {
     const [msgCount, setMsgCount] = React.useState(0)
 
     React.useEffect(() => {
-        document.title = 'New Messages (' + msgCount + ')'
         console.log("useEffect Hook Called");
+
+        if (msgCount > 0) {
+            document.title = 'New Messages (' + msgCount + ')'
+        } else {
+            document.title = 'No New Messages'
+        }
+
     });
 
     const incrementCount = () => {
