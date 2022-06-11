@@ -1,18 +1,18 @@
 import React from "react"
-import ConditionalRendering from "../3-ConditionalRedering/ConditionalRendering";
 
 //import UseStateLearn from "./UseStateLearn";
 //import UseEffectLearn from "./UseEffectLearn";
 
 import "../App/app.css"
+import MultipleReturn from "./MultipleReturnLearn";
 
 
 const App = () => {
     return (
         <React.Fragment>
-            {/* <UseStateLearn /> */}
-            {/*<UseEffectLearn />*/}
-            <ConditionalRendering />
+            {/* <UseStateLearn />
+            <UseEffectLearn />*/}
+            <MultipleReturn />
         </React.Fragment>
     );
 }
