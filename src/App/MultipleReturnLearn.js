@@ -2,6 +2,7 @@ import React from "react";
 
 import ConditionalRendering from "../3-MultipleReturn/ConditionalRendering"
 import FetchDataWithConditionalRendering from "../3-MultipleReturn/FetchDataWithConditionalRendering";
+import ShortCircuit from "../3-MultipleReturn/ShortCircuit";
 
 const MultipleReturn = () => {
     return (
@@ -25,6 +26,12 @@ const MultipleReturn = () => {
                 <center>
                     {/**this will set loading on screen -- then fetch API called for user details -- once response receviced -- if success then will stop loading and show user data, else we stop loading and show error */}
                     <FetchDataWithConditionalRendering />
+                </center>
+
+                <hr />
+
+                <center>
+                    <ShortCircuit />
                 </center>
 
             </div>
