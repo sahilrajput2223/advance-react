@@ -3,6 +3,7 @@ import React from "react";
 import ConditionalRendering from "../3-MultipleReturn/ConditionalRendering"
 import FetchDataWithConditionalRendering from "../3-MultipleReturn/FetchDataWithConditionalRendering";
 import ShortCircuit from "../3-MultipleReturn/ShortCircuit";
+import ShowHideWithToggleAndCleanup from "../3-MultipleReturn/ShowHideWithToggleAndCleanup";
 import TernaryOperator from "../3-MultipleReturn/TernaryOperator";
 
 const MultipleReturn = () => {
@@ -39,6 +40,12 @@ const MultipleReturn = () => {
 
                 <center>
                     <TernaryOperator />
+                </center>
+
+                <hr />
+
+                <center>
+                    <ShowHideWithToggleAndCleanup />
                 </center>
 
             </div>
