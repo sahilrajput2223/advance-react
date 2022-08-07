@@ -4,11 +4,18 @@ const ControlledInput = () => {
 
     const [name, setName] = React.useState("")
     const [email, setEmail] = React.useState("")
+    const [userData, setUserData] = React.useState([])
 
     const handleSubmitEvent = (event) => {
         event.preventDefault()
-        console.log("Name is --> " + name)
-        console.log("Email is --> " + email)
+        const user = { name, email }
+
+        setUserData((userData) => {
+            return [...userData, user]
+        })
+
+        setName("")
+        setEmail("")
     }
 
     const handleResetEvent = (event) => {
@@ -32,6 +39,29 @@ const ControlledInput = () => {
                 <button type="submit" className="btn btn-primary">Submit</button>
                 <button type="reset" className="btn btn-danger">Reset</button>
             </form>
+
+            <div className="container">
+                <div className="row">
+                    {userData.map((user) => {
+                        return (<div className="col-md-12">
+                            <div className="col-md-12">
+                                <p>
+                                    {user.name}
+                                </p>
+                            </div>
+                            <div className="col-md-12">
+                                <p>
+                                    {user.email}
+                                </p>
+                            </div>
+                            <div className="col-md-12">
+                                <hr />
+                            </div>
+                        </div>
+                        )
+                    })}
+                </div>
+            </div>
 
         </React.Fragment>
     );
