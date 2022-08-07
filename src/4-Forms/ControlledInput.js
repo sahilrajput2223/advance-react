@@ -4,11 +4,18 @@ const ControlledInput = () => {
 
     const [name, setName] = React.useState("")
     const [email, setEmail] = React.useState("")
+    const [userData, setUserData] = React.useState([])
 
     const handleSubmitEvent = (event) => {
         event.preventDefault()
-        console.log("Name is --> " + name)
-        console.log("Email is --> " + email)
+        const user = { id: new Date().getTime(), name, email }
+
+        setUserData((userData) => {
+            return [...userData, user]
+        })
+
+        setName("")
+        setEmail("")
     }
 
     const handleResetEvent = (event) => {
@@ -24,14 +31,37 @@ const ControlledInput = () => {
 
             <form onSubmit={handleSubmitEvent} onReset={handleResetEvent}>
                 <label htmlFor="name"> Name: </label>
-                <input type="text" id="name" name="name" value={name} onChange={(event) => setName(event.target.value)}></input>
+                <input required type="text" id="name" name="name" value={name} onChange={(event) => setName(event.target.value)}></input>
                 <br />
                 <label htmlFor="email"> Email: </label>
-                <input type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                <input required type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)}></input>
                 <br />
                 <button type="submit" className="btn btn-primary">Submit</button>
                 <button type="reset" className="btn btn-danger">Reset</button>
             </form>
+
+            <div className="container">
+                <div className="row">
+                    {userData.map((user) => {
+                        return (<div className="col-md-12" key={user.id}>
+                            <div className="col-md-12">
+                                <p>
+                                    {user.name}
+                                </p>
+                            </div>
+                            <div className="col-md-12">
+                                <p>
+                                    {user.email}
+                                </p>
+                            </div>
+                            <div className="col-md-12">
+                                <hr />
+                            </div>
+                        </div>
+                        )
+                    })}
+                </div>
+            </div>
 
         </React.Fragment>
     );
