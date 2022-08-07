@@ -8,7 +8,7 @@ const ControlledInput = () => {
 
     const handleSubmitEvent = (event) => {
         event.preventDefault()
-        const user = { name, email }
+        const user = { id: new Date().getTime(), name, email }
 
         setUserData((userData) => {
             return [...userData, user]
@@ -43,7 +43,7 @@ const ControlledInput = () => {
             <div className="container">
                 <div className="row">
                     {userData.map((user) => {
-                        return (<div className="col-md-12">
+                        return (<div className="col-md-12" key={user.id}>
                             <div className="col-md-12">
                                 <p>
                                     {user.name}
