@@ -11,13 +11,18 @@ const ControlledInput = () => {
         console.log("Email is --> " + email)
     }
 
+    const handleResetEvent = (event) => {
+        setEmail("")
+        setName("")
+    }
+
     return (
         <React.Fragment>
             <h4>
                 Controlled Input
             </h4>
 
-            <form onSubmit={handleSubmitEvent}>
+            <form onSubmit={handleSubmitEvent} onReset={handleResetEvent}>
                 <label htmlFor="name"> Name: </label>
                 <input type="text" id="name" name="name" value={name} onChange={(event) => setName(event.target.value)}></input>
                 <br />
