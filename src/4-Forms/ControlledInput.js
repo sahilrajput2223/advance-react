@@ -24,10 +24,10 @@ const ControlledInput = () => {
 
             <form onSubmit={handleSubmitEvent} onReset={handleResetEvent}>
                 <label htmlFor="name"> Name: </label>
-                <input type="text" id="name" name="name" value={name} onChange={(event) => setName(event.target.value)}></input>
+                <input required type="text" id="name" name="name" value={name} onChange={(event) => setName(event.target.value)}></input>
                 <br />
                 <label htmlFor="email"> Email: </label>
-                <input type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                <input required type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)}></input>
                 <br />
                 <button type="submit" className="btn btn-primary">Submit</button>
                 <button type="reset" className="btn btn-danger">Reset</button>
